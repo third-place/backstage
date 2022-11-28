@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backstage
+spec:
+  selector:
+    matchLabels:
+      app: backstage
+  template:
+    metadata:
+      labels:
+        app: backstage
+    spec:
+      containers:
+      - name: backstage
+        image: ghcr.io/danielmunro/otto-backstage:v0.1.2
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 7007
+            name: http
+            protocol: TCP
+        env:
+          - name: APP_CONFIG_backend_database_connection_host
+            valueFrom:
+              secretKeyRef:
+                name: postgres-backstage
+                key: host
+          - name: APP_CONFIG_backend_database_connection_port
+            valueFrom:
+              secretKeyRef:
+                name: postgres-backstage
+                key: port
+          - name: APP_CONFIG_backend_database_connection_user
+            valueFrom:
+              secretKeyRef:
+                name: postgres-backstage
+                key: user
+          - name: APP_CONFIG_backend_database_connection_password
+            valueFrom:
+              secretKeyRef:
+                name: postgres-backstage
+                key: password
+      imagePullSecrets:
+        - name: postgres-backstage
