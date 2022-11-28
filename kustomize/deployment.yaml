@@ -27,13 +27,13 @@ spec:
             - name: github-app
               mountPath: "/var/github-app"
               readOnly: true
-#          lifecycle:
-#            postStart:
-#              exec:
-#                command:
-#                  - /bin/sh
-#                  - -c
-#                  - cp /var/github-app/github-app /app
+          lifecycle:
+            postStart:
+              exec:
+                command:
+                  - /bin/sh
+                  - -c
+                  - cp /var/github-app/github-app /app
           env:
             - name: APP_CONFIG_app_baseUrl
               value: https://backstage.thirdplaceapp.com
