@@ -34,13 +34,13 @@ catalog:
   # on how to get entities into the catalog.
   readonly: true
   locations:
-    - type: file
+    - type: url
       target: https://raw.githubusercontent.com/third-place/web-ui/main/catalog-info.yaml
-    - type: file
+    - type: url
       target: https://raw.githubusercontent.com/third-place/user-service/main/catalog-info.yaml
-    - type: file
+    - type: url
       target: https://raw.githubusercontent.com/third-place/community-service/main/catalog-info.yaml
-    - type: file
+    - type: url
       target: https://raw.githubusercontent.com/third-place/notification-service/main/catalog-info.yaml
-    - type: file
+    - type: url
       target: https://raw.githubusercontent.com/third-place/image-service/main/catalog-info.yaml
