@@ -36,3 +36,11 @@ catalog:
   locations:
     - type: file
       target: https://raw.githubusercontent.com/third-place/web-ui/main/catalog-info.yaml
+    - type: file
+      target: https://raw.githubusercontent.com/third-place/user-service/main/catalog-info.yaml
+    - type: file
+      target: https://raw.githubusercontent.com/third-place/community-service/main/catalog-info.yaml
+    - type: file
+      target: https://raw.githubusercontent.com/third-place/notification-service/main/catalog-info.yaml
+    - type: file
+      target: https://raw.githubusercontent.com/third-place/image-service/main/catalog-info.yaml
