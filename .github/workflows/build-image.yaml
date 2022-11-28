@@ -1,0 +1,19 @@
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  publish-docker-image:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          yarn install --frozen-lockfile
+          yarn tsc
+          yarn build
+      - run: echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
+      - run: DOCKER_BUILDKIT=1 docker build . -f packages/backend/Dockerfile --tag ghcr.io/${{ github.repository }}:${{ github.ref_name }}
+      - run: docker push ghcr.io/${{ github.repository }}:${{ github.ref_name }}
