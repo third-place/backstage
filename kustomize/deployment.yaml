@@ -33,7 +33,7 @@ spec:
                 command:
                   - /bin/sh
                   - -c
-                  - cp /var/github-app/github-app /app
+                  - cp /var/github-app/github-app-backstage-third-place-credentials.yaml /app
           env:
             - name: APP_CONFIG_app_baseUrl
               value: https://backstage.thirdplaceapp.com
