@@ -27,9 +27,6 @@ backend:
       # ssl:
       #   ca: # if you have a CA file and want to verify it you can uncomment this section
       #     $file: <file-path>/ca/server.crt
-  reading:
-    allow:
-      - host: github.com
 
 catalog:
   # Overrides the default list locations from app-config.yaml as these contain example data.
@@ -47,3 +44,8 @@ catalog:
       target: https://raw.githubusercontent.com/third-place/notification-service/main/catalog-info.yaml
     - type: url
       target: https://raw.githubusercontent.com/third-place/image-service/main/catalog-info.yaml
+
+integrations:
+  github:
+    - host: github.com
+      token: ${GITHUB_TOKEN}
