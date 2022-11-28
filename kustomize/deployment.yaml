@@ -21,7 +21,7 @@ spec:
             protocol: TCP
         env:
           - name: APP_CONFIG_app_baseUrl
-            value: http://backstage
+            value: https://backstage.thirdplaceapp.com
           - name: APP_CONFIG_backend_baseUrl
             value: http://backstage
           - name: APP_CONFIG_backend_database_connection_host
