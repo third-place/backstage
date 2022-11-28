@@ -24,11 +24,6 @@ spec:
             value: https://backstage.thirdplaceapp.com
           - name: APP_CONFIG_backend_baseUrl
             value: https://backstage.thirdplaceapp.com
-          - name: GITHUB_TOKEN
-            valueFrom:
-              secretKeyRef:
-                name: backstage
-                key: github_token
           - name: APP_CONFIG_backend_database_connection_host
             valueFrom:
               secretKeyRef:
