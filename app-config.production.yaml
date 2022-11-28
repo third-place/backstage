@@ -33,3 +33,9 @@ catalog:
   # See https://backstage.io/docs/features/software-catalog/software-catalog-overview#adding-components-to-the-catalog for more details
   # on how to get entities into the catalog.
   []
+
+integrations:
+  github:
+    - host: github.com
+      apps:
+        - $include: github-app-backstage-third-place-credentials.yaml
