@@ -11,6 +11,10 @@ spec:
       labels:
         app: backstage
     spec:
+      volumes:
+        - name: github-app
+          secret:
+            secretName: backstage
       containers:
         - name: backstage
           image: ghcr.io/third-place/backstage:v0.1.10
@@ -19,6 +23,17 @@ spec:
             - containerPort: 7007
               name: http
               protocol: TCP
+          volumeMounts:
+            - name: github-app
+              mountPath: "/var/github-app"
+              readOnly: true
+#          lifecycle:
+#            postStart:
+#              exec:
+#                command:
+#                  - /bin/sh
+#                  - -c
+#                  - cp /var/github-app/github-app /app
           env:
             - name: APP_CONFIG_app_baseUrl
               value: https://backstage.thirdplaceapp.com
