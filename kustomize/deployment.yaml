@@ -20,6 +20,8 @@ spec:
             name: http
             protocol: TCP
         env:
+          - name: APP_CONFIG_backend_baseUrl
+            value: http://backstage
           - name: APP_CONFIG_backend_database_connection_host
             valueFrom:
               secretKeyRef:
