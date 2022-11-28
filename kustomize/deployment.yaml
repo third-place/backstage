@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: backstage
-          image: ghcr.io/third-place/backstage:v0.1.8
+          image: ghcr.io/third-place/backstage:v0.1.10
           imagePullPolicy: Always
           ports:
             - containerPort: 7007
