@@ -3,8 +3,8 @@ kind: Component
 metadata:
   name: third-place
   description: the backstage deployment itself
-   annotations:
-     github.com/project-slug: third-place/backstage
+  annotations:
+    github.com/project-slug: third-place/backstage
 spec:
   type: website
   owner: dan@danmunro.com
