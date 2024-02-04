@@ -1,3 +1,4 @@
-name: backstage
-port: 7007
-targetPort: 7007
+service:
+  name: backstage
+  port: 7007
+  targetPort: 7007
