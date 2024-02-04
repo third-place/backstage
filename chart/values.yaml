@@ -1,0 +1,3 @@
+name: backstage
+port: 7007
+targetPort: 7007

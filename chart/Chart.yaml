@@ -1,0 +1,7 @@
+name: backstage
+apiVersion: v2
+version: 0.0.1
+dependencies:
+  - name: service
+    version: 0.0.1
+    repository: https://github.com/third-place/platform/service
