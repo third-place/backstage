@@ -1,6 +1,6 @@
 dependencies:
 - name: service
   repository: https://c8n.io/chartrepo/third-place
-  version: 0.0.6
-digest: sha256:a409eea4d0322d1e0f63ac28ed37bd08aca8ae9ff6092644b34a105f1e20c9d3
-generated: "2024-02-04T10:52:43.540976-08:00"
+  version: 0.0.8
+digest: sha256:5a0ee4d03c9c439355e3dcdad247abc848d3e55b09ae567304436d62d2940e21
+generated: "2024-02-04T17:47:22.954809-08:00"
