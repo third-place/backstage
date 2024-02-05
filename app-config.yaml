@@ -21,6 +21,12 @@ backend:
     connection: ':memory:'
   cache:
     store: memory
+techdocs:
+  builder: 'local'
+  generator:
+    runIn: 'docker'
+  publisher:
+    type: 'local'
 catalog:
   readonly: true
   import:
