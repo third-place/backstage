@@ -27,6 +27,10 @@ techdocs:
     runIn: 'docker'
   publisher:
     type: 'local'
+integrations:
+  github:
+    - host: github.com
+      token: ${GITHUB_TOKEN}
 catalog:
   readonly: true
   import:
