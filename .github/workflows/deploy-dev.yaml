@@ -17,8 +17,8 @@ jobs:
       - run: DOCKER_BUILDKIT=1 docker build . -f packages/backend/Dockerfile --tag ghcr.io/${{ github.repository }}:${{ github.sha }}
       - run: docker push ghcr.io/${{ github.repository }}:${{ github.sha }}
   deploy-service:
-    uses: third-place/actions/.github/workflows/deploy-env.yaml@main
     needs: publish-docker-image
+    uses: third-place/actions/.github/workflows/deploy-env.yaml@main
     secrets: inherit
     with:
       name: backstage
