@@ -1,3 +1,6 @@
 service:
   port: 7007
   targetPort: 7007
+  hpa:
+    minReplicas: 2
+    maxReplicas: 4
