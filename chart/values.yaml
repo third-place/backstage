@@ -1,3 +1,18 @@
 service:
+  enabled: true
+  nodePort: 30105
+  secrets: []
+  serviceType: NodePort
+  ingress:
+    enabled: true
+    paths:
+      - /
   port: 7007
   targetPort: 7007
+  resources:
+    requests:
+      memory: 128Mi
+      cpu: 250m
+    limits:
+      memory: 256Mi
+      cpu: 500m
