@@ -20,7 +20,7 @@ jobs:
     uses: third-place/actions/.github/workflows/deploy-env.yaml@main
     needs: publish-docker-image
     with:
-      service_name: backstage
+      name: backstage
       env: dev
     secrets:
       PAT: ${{ secrets.CR_PAT }}
