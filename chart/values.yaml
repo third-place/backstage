@@ -2,5 +2,6 @@ service:
   port: 7007
   targetPort: 7007
   hpa:
+    scaleTargetRef: ReplicaSet
     minReplicas: 2
     maxReplicas: 4
