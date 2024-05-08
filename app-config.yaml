@@ -6,7 +6,7 @@ organization:
   name: Third Place
 
 backend:
-  baseUrl: http://localhost:7007
+  baseUrl: https://backstage.thirdplaceappdev.com
   listen: 0.0.0.0:7007
   csp:
     connect-src: ["'self'", 'http:', 'https:']
